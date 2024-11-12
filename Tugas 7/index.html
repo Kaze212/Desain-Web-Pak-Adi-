@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Buku Favorit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Buku Favorit</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-500 text-white py-20 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold">Selamat Datang di Aplikasi Buku Favorit</h1>
+            <p class="mt-4 text-lg">Kelola koleksi buku favorit Anda dengan mudah dan cepat</p>
+        </div>
+    </section>
+
+    <!-- Input Nama Pengguna -->
+    <div id="session-container" class="container mx-auto mt-8 p-4">
+        <input type="text" id="namaPengguna" class="border p-2 mr-2" placeholder="Masukkan Nama Anda" />
+        <button id="btnSimpanNama" class="bg-blue-500 text-white p-2">Simpan Nama</button>
+        <h3 id="salamPengguna" class="mt-4"></h3>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+        
+        <!-- Form Tambah Buku -->
+        <form id="form-tambah-buku" class="p-4 bg-white shadow-md rounded" style="grid-column: span 1;">
+            <h2 class="text-2xl font-bold mb-4">Tambah Buku</h2>
+            <input type="text" id="judul" class="border p-2 w-full mb-4" placeholder="Judul Buku"  />
+            <input type="text" id="penulis" class="border p-2 w-full mb-4" placeholder="Penulis"  />
+            <input type="number" id="tahun" class="border p-2 w-full mb-4" placeholder="Tahun Terbit"  />
+            <button type="submit" class="bg-blue-500 text-white p-2 w-full">Tambah Buku</button>
+        </form>
+
+        <!-- Daftar Buku -->
+        <div class="p-4 bg-white shadow-md rounded" style="grid-column: span 1;">
+            <h2 class="text-xl font-bold mb-4">Daftar Buku</h2>
+            <div id="daftar-buku"></div>
+        </div>
+
+        <!-- Buku Favorit -->
+        <div class="p-4 bg-white shadow-md rounded md:col-span-2">
+            <h2 class="text-xl font-bold mb-4">Buku Favorit</h2>
+            <div id="buku-favorit"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
